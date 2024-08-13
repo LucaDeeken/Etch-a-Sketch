@@ -16,7 +16,7 @@ const fieldBox = document.querySelector(".test");
 fieldBox.style.cssText = "display: flex;flex-wrap: wrap; min-width:960px; max-width:960px; max-height:960px; min-height: 960px; margin: 0px; border: solid black 4px";
 
 const button = document.createElement("button");
-button.style.cssText = "font-size:30px; margin-top: 10px; margin-right: 55px; margin-left:55px; padding: 30px; padding-top:20px; padding-bottom: 20px; font-weight: bold; border: solid black 3px; border-radius: 10px";
+button.style.cssText = "font-size:30px; margin-top: 10px; margin-right: 65px; margin-left:65px; padding: 30px; padding-top:20px; padding-bottom: 20px; font-weight: bold; border: solid black 3px; border-radius: 10px";
 button.textContent = "Change Size";
 
 const reset = document.createElement("button");
@@ -60,7 +60,9 @@ button.addEventListener("click", () => {
     if (frage>100) {
         alert1= alert("Inputnumber is too high!")
         return;
-    }
+    } else if (frage === null) {
+            return;
+        };
     fieldBox.innerHTML = "";
     x = frage*frage;
     size = 960 / frage;
