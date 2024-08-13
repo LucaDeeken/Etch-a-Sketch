@@ -41,22 +41,33 @@ for (i=0; i<256; i++) {
     span.style.cssText= "border: solid black 0.1px; box-sizing: border-box; width: 60px; height: 60px";
     span.classList.add("span");
     let randomNumber= Math.random();
-    let randomNumber2= Math.random();
-    let randomNumber3= Math.random();
-    console.log(randomNumber);
+  
     let h = Math.floor(((randomNumber *1000)/999)*360);
-    let s = Math.floor(randomNumber2 * 100);
-    let l = Math.floor(randomNumber3 * 100);
-    console.log(h,s,l);
+    let s = 100;
+    let l = 50;
     
 
-    span.addEventListener("mouseover", () => {
+    span.addEventListener("mousedown", () => {
         const randomColor =`hsl(${h},${s}%,${l}%)`;
         span.style.backgroundColor = randomColor;
-
+        mouseOverEvent = true;
+            
     });
- 
 
+    span.addEventListener("mouseover", () => {
+        if (mouseOverEvent===true) {
+
+            const randomColor =`hsl(${h},${s}%,${l}%)`;
+            span.style.backgroundColor = randomColor;
+            mouseDownEvent = true;
+        }     
+    });
+
+    span.addEventListener("mouseup", () => {
+        mouseOverEvent = false;
+        });
+        
+            
     };
 
 
@@ -69,6 +80,7 @@ let alert1="";
 numbers = [x, size];
 
 button.addEventListener("click", () => {
+    mouseOverEvent = false;
     frage= prompt("How many grids per line? (100 max.)");
     if (frage>100) {
         alert1= alert("Inputnumber is too high!")
@@ -87,20 +99,31 @@ button.addEventListener("click", () => {
         span.style.height = `${size}px`;
         span.classList.add("span");
         let randomNumber= Math.random();
-        let randomNumber2= Math.random();
-        let randomNumber3= Math.random();
-        console.log(randomNumber);
         let h = Math.floor(((randomNumber *1000)/999)*360);
-        let s = Math.floor(randomNumber2 * 100);
-        let l = Math.floor(randomNumber3 * 100);
-        console.log(h,s,l);
-        
+        let s = 100;
+        let l = 50;
+       
     
-        span.addEventListener("mouseover", () => {
+        span.addEventListener("mousedown", () => {
             const randomColor =`hsl(${h},${s}%,${l}%)`;
             span.style.backgroundColor = randomColor;
-    
+            mouseOverEvent = true;
+                
         });
+    
+        span.addEventListener("mouseover", () => {
+            if (mouseOverEvent===true) {
+    
+                const randomColor =`hsl(${h},${s}%,${l}%)`;
+                span.style.backgroundColor = randomColor;
+                mouseDownEvent = true;
+            }     
+        });
+    
+        span.addEventListener("mouseup", () => {
+            mouseOverEvent = false;
+            });
+            
     }
     numbers = [x, size];
     return numbers;
@@ -110,6 +133,7 @@ button.addEventListener("click", () => {
 
 // reset function, um das Feld zu leeren
   reset.addEventListener("click", () => {
+    mouseOverEvent = false;
     fieldBox.innerHTML = "";
     console.log(numbers);
     let [x, size] = numbers;
@@ -123,18 +147,31 @@ button.addEventListener("click", () => {
         span.classList.add("span");
 
         let randomNumber= Math.random();
-        let randomNumber2= Math.random();
-        let randomNumber3= Math.random();
         let h = Math.floor(((randomNumber *1000)/999)*360);
-        let s = Math.floor(randomNumber2 * 100);
-        let l = Math.floor(randomNumber3 * 100);
+        let s = 100;
+        let l = 50;
     
 
+        span.addEventListener("mousedown", () => {
+            const randomColor =`hsl(${h},${s}%,${l}%)`;
+            span.style.backgroundColor = randomColor;
+            mouseOverEvent = true;
+                
+        });
+    
         span.addEventListener("mouseover", () => {
-        const randomColor =`hsl(${h},${s}%,${l}%)`;
-        span.style.backgroundColor = randomColor;
-
-    });
+            if (mouseOverEvent===true) {
+    
+                const randomColor =`hsl(${h},${s}%,${l}%)`;
+                span.style.backgroundColor = randomColor;
+                mouseDownEvent = true;
+            }     
+        });
+    
+        span.addEventListener("mouseup", () => {
+            mouseOverEvent = false;
+            });
+            
     }
   });
 
