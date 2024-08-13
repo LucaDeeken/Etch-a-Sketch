@@ -77,19 +77,31 @@ button.addEventListener("click", () => {
     
         })
     }
+    numbers = [x, size];
+    return numbers;
+
   });
+
 
 
   reset.addEventListener("click", () => {
     fieldBox.innerHTML = "";
+    console.log(numbers);
+    let [x, size] = numbers;
+    console.log(x);
     for (i=0; i<x; i++) {
-        const span = document.createElement("span");
-        fieldBox.appendChild(div);
+        const span = document.createElement("div");
+        fieldBox.appendChild(span);
         span.style.cssText= "border: solid black 0.1px; box-sizing: border-box";
-        span.classList.add("span.hover:");
         span.style.width = `${size}px`;
         span.style.height = `${size}px`;
-        span.classList.add('a:hover');
+        span.classList.add("span");
+
+        span.addEventListener("mouseout", () => {
+            
+            span.classList.add("spanHoverOut");
+    
+        })
     }
   });
 
