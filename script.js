@@ -4,7 +4,7 @@ body.style.cssText = "display:flex; flex-wrap: wrap; justify-content: center; fl
 
 const title = document.createElement("div");
 title.textContent= "Etch-a-Sketch!";
-title.style.cssText = "display: flex; font-size:45px; margin: auto; margin-top: 175px; justify-content: center; font-weight: bold";
+title.style.cssText = "display: flex; font-size:50px; margin: auto; margin-top: 175px; justify-content: center; font-weight: bold";
 title.classList.add("title");
 
 const div2 = document.createElement("div");
@@ -19,10 +19,12 @@ fieldBox.style.cssText = "display: flex;flex-wrap: wrap; min-width:960px; max-wi
 const button = document.createElement("button");
 button.style.cssText = "font-size:30px; margin-top: 155px; padding: 30px; padding-top:20px; padding-bottom: 20px; font-weight: bold; border: solid black 3px; border-radius: 10px";
 button.textContent = "Change Size";
+button.classList.add("change");
 
 const reset = document.createElement("button");
 reset.style.cssText = "font-size:30px; margin-bottom: 500px; padding: 30px; padding-top:20px; padding-bottom: 20px; font-weight: bold; border: solid black 3px; border-radius: 10px";
 reset.textContent = "Reset";
+reset.classList.add("reset");
 
 div3.appendChild(title);
 body.appendChild(div2);
