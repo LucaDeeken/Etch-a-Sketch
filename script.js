@@ -1,4 +1,4 @@
-// the JavaScript file
+// Containersammlung; aus experimentellen Gründen (umständlich) nahezu gänzlich über Javascript gebaut.
 const body= document.querySelector("#body");
 body.style.cssText = "display:flex; flex-wrap: wrap; justify-content: center; flex-direction: column";
 
@@ -34,24 +34,34 @@ div3.appendChild(button);
 div3.appendChild(reset);
 
 
-
-
+//Ausgangsanordung des Netzes (16x16)
 for (i=0; i<256; i++) {
     const span = document.createElement("span");
     fieldBox.appendChild(span);
     span.style.cssText= "border: solid black 0.1px; box-sizing: border-box; width: 60px; height: 60px";
     span.classList.add("span");
+    let randomNumber= Math.random();
+    let randomNumber2= Math.random();
+    let randomNumber3= Math.random();
+    console.log(randomNumber);
+    let h = Math.floor(((randomNumber *1000)/999)*360);
+    let s = Math.floor(randomNumber2 * 100);
+    let l = Math.floor(randomNumber3 * 100);
+    console.log(h,s,l);
+    
 
-    span.addEventListener("mouseout", () => {
-        
-        span.classList.add("spanHoverOut");
+    span.addEventListener("mouseover", () => {
+        const randomColor =`hsl(${h},${s}%,${l}%)`;
+        span.style.backgroundColor = randomColor;
 
-    })
+    });
+ 
+
     };
 
 
 
-
+//Change Size FUnktion, um die Größe des Feldes individuell zu gestalten
 let frage="";
 let x=256;
 let size=60;
@@ -76,12 +86,21 @@ button.addEventListener("click", () => {
         span.style.width = `${size}px`;
         span.style.height = `${size}px`;
         span.classList.add("span");
-
-        span.addEventListener("mouseout", () => {
-            
-            span.classList.add("spanHoverOut");
+        let randomNumber= Math.random();
+        let randomNumber2= Math.random();
+        let randomNumber3= Math.random();
+        console.log(randomNumber);
+        let h = Math.floor(((randomNumber *1000)/999)*360);
+        let s = Math.floor(randomNumber2 * 100);
+        let l = Math.floor(randomNumber3 * 100);
+        console.log(h,s,l);
+        
     
-        })
+        span.addEventListener("mouseover", () => {
+            const randomColor =`hsl(${h},${s}%,${l}%)`;
+            span.style.backgroundColor = randomColor;
+    
+        });
     }
     numbers = [x, size];
     return numbers;
@@ -89,7 +108,7 @@ button.addEventListener("click", () => {
   });
 
 
-// reset function
+// reset function, um das Feld zu leeren
   reset.addEventListener("click", () => {
     fieldBox.innerHTML = "";
     console.log(numbers);
@@ -103,11 +122,19 @@ button.addEventListener("click", () => {
         span.style.height = `${size}px`;
         span.classList.add("span");
 
-        span.addEventListener("mouseout", () => {
-            
-            span.classList.add("spanHoverOut");
+        let randomNumber= Math.random();
+        let randomNumber2= Math.random();
+        let randomNumber3= Math.random();
+        let h = Math.floor(((randomNumber *1000)/999)*360);
+        let s = Math.floor(randomNumber2 * 100);
+        let l = Math.floor(randomNumber3 * 100);
     
-        })
+
+        span.addEventListener("mouseover", () => {
+        const randomColor =`hsl(${h},${s}%,${l}%)`;
+        span.style.backgroundColor = randomColor;
+
+    });
     }
   });
 

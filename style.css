@@ -3,15 +3,7 @@
     background-color: white;
 }
 
-.span:hover {
-    background-color: blue; 
-    color: white; 
-  }
 
-  .spanHoverOut {
-    background-color: blue; 
-    color: white; 
-  }
 
   body {
     background-color: rgb(253, 231, 204);
@@ -21,20 +13,12 @@
  .title {
 
     text-shadow: 
-    1px 1px 0 #000,   /* Horizontale Verschiebung, vertikale Verschiebung, Unschärfe, Farbe */
-    -1px -1px 0 #000, /* Horizontale Verschiebung, vertikale Verschiebung, Unschärfe, Farbe */
-    1px -1px 0 #000,  /* Horizontale Verschiebung, vertikale Verschiebung, Unschärfe, Farbe */
+    1px 1px 0 #000,   
+    -1px -1px 0 #000, 
+    1px -1px 0 #000,  
     -1px 1px 0 #000; 
 
  }
-
- .change:hover {
-    background-color: #45a049;
-}
-
-.reset:hover {
-    background-color: red;
-}
 
   
   
