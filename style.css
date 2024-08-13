@@ -20,5 +20,16 @@
 
  }
 
-  
+ .change:hover {
+    background-color: #45a049;
+}
+
+.reset:hover {
+    background-color: red;
+}
+
+.rainBow:hover {
+    background: linear-gradient(45deg, #ff6b6b, #f9ca24, #1dd1a1, #575fcf); /* Farbverlauf */
+    animation: gradient 4s ease infinite;
+}
   
