@@ -1,0 +1,10 @@
+.span:hover {
+    background-color: blue; 
+    color: white; 
+  }
+
+  .spanHoverOut {
+    background-color: blue; 
+    color: white; 
+  }
+  
