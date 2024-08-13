@@ -4,27 +4,28 @@ body.style.cssText = "display:flex; flex-wrap: wrap; justify-content: center; fl
 
 const title = document.createElement("div");
 title.textContent= "Etch-a-Sketch!";
-title.style.cssText = "display: flex; font-size:35px; margin: 40px; margin-top: 20px; justify-content: center; font-weight: bold";
+title.style.cssText = "display: flex; font-size:45px; margin: auto; margin-top: 175px; justify-content: center; font-weight: bold";
+title.classList.add("title");
 
 const div2 = document.createElement("div");
-div2.style.cssText = "display:flex; justify-content: center; gap: 50px";
+div2.style.cssText = "display:flex; justify-content: center; gap: 150px";
 
 const div3 = document.createElement("div");
-div3.style.cssText = "display: flex; flex-direction: column; justify-content: center; gap: 200px";
+div3.style.cssText = "display: flex; flex-direction: column; justify-content: center; gap: 50px";
 
 const fieldBox = document.querySelector(".test");
-fieldBox.style.cssText = "display: flex;flex-wrap: wrap; min-width:960px; max-width:960px; max-height:960px; min-height: 960px; margin: 0px; border: solid black 4px";
+fieldBox.style.cssText = "display: flex;flex-wrap: wrap; min-width:960px; max-width:960px; max-height:960px; min-height: 960px; margin-top: 50px; border: solid black 4px";
 
 const button = document.createElement("button");
-button.style.cssText = "font-size:30px; margin-top: 10px; margin-right: 65px; margin-left:65px; padding: 30px; padding-top:20px; padding-bottom: 20px; font-weight: bold; border: solid black 3px; border-radius: 10px";
+button.style.cssText = "font-size:30px; margin-top: 155px; padding: 30px; padding-top:20px; padding-bottom: 20px; font-weight: bold; border: solid black 3px; border-radius: 10px";
 button.textContent = "Change Size";
 
 const reset = document.createElement("button");
-reset.style.cssText = "font-size:30px; margin-top: 10px; margin-right: 110px; margin-left:110px; padding: 30px; padding-top:20px; padding-bottom: 20px; font-weight: bold; border: solid black 3px; border-radius: 10px";
+reset.style.cssText = "font-size:30px; margin-bottom: 500px; padding: 30px; padding-top:20px; padding-bottom: 20px; font-weight: bold; border: solid black 3px; border-radius: 10px";
 reset.textContent = "Reset";
 
-body.appendChild(title);
-body.appendChild(div2)
+div3.appendChild(title);
+body.appendChild(div2);
 div2.appendChild(div3);
 div2.appendChild(fieldBox);
 div3.appendChild(button);
