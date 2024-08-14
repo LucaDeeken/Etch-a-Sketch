@@ -164,6 +164,8 @@ button.addEventListener("click", () => {
     }
   });
 
+//farbtechnische rainbow-Alternative
+
   rainbow.addEventListener("click", () => {
     mouseOverEvent = false;
     fieldBox.innerHTML = "";
